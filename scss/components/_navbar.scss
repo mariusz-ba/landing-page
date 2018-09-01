@@ -1,0 +1,137 @@
+.navbar {
+  height: 64px;
+
+  & > .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-query('mobile') {
+      width: unset;
+      margin: unset;
+      padding-left: 8.6666%;
+      padding-right: 8.6666%;
+    }
+  }
+
+  &__toggler {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+
+    position: absolute;
+    display: none;
+    top: 50%;
+    right: 8.6666%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 24px;
+
+    span {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: $color-black;
+      opacity: 1;
+      border-radius: 2px;
+
+      transition: transform linear .2s,
+                  opacity linear .2s;
+
+      &:nth-of-type(1) { top: 0; }
+      &:nth-of-type(2) { top: 50%; transform: translateY(-50%);}
+      &:nth-of-type(3) { bottom: 0; }
+    }
+
+    @include media-query('mobile') {
+      display: block;
+    }
+
+    &--open {
+      span:nth-of-type(2) {
+        opacity: 0;
+        transform: translateX(32px);
+      }
+      span:nth-of-type(1) {
+        transform: translateY(10.5px) rotateZ(45deg);
+      }
+      span:nth-of-type(3) { 
+        transform: translateY(-11.5px) rotateZ(-45deg);
+      }
+    }
+  }
+
+  &__nav {
+    @include media-query('mobile') {
+      padding-left: 8.6666%;
+      padding-right: 8.6666%;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+
+      background: $color-gray-1;
+
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid rgba(0, 0, 0, .125);
+      border-bottom: 1px solid rgba(0, 0, 0, .125);
+
+      &--open {
+        display: block;
+      }
+    }
+  }
+
+  &__brand {
+    img {
+      width: auto;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__menu {
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+
+    &-item {
+      &:not(:last-of-type) {
+        margin-right: 1.5rem;
+      }
+
+      a {
+        display: inline-block;
+        color: $color-black;
+        text-decoration: none;
+        font-family: $font-secondary;
+        font-weight: 700;
+        font-size: $font-s;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $color-teal;
+        }
+      }
+
+      @include media-query('mobile') {
+        margin-right: 0 !important;
+
+        a {
+          padding: 1rem 0;
+        }
+      }
+    }
+
+    @include media-query('mobile') {
+      display: block;
+    }
+  }
+}

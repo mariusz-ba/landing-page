@@ -1,0 +1,16 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "description": "Just random landing page for fun",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass scss/main.scss css/style.css --output-style compressed",
+    "start": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Mariusz Baran",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "nodemon": "^1.14.12"
+  }
+}

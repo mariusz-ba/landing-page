@@ -1,0 +1,19 @@
+// Base
+@import 'base/_typography';
+@import 'base/_variables';
+@import 'base/_reset';
+
+// Utils
+@import 'utils/_mixins';
+
+// Components
+@import 'components/_container';
+@import 'components/_navbar';
+
+// Layout
+@import 'layout/_header';
+@import 'layout/_about';
+
+body {
+  font-family: $font-primary, $font-secondary, sans-serif;
+}

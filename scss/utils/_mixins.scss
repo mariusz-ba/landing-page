@@ -1,0 +1,9 @@
+@mixin media-query($name) {
+  $names: (
+    mobile: 768px
+  );
+
+  @media screen and (max-width: map-get($names, $name)) {
+    @content;
+  }
+}

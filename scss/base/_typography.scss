@@ -1,0 +1,33 @@
+$font-weights-montserrat: (
+  Regular: 400,
+  Medium: 500,
+  Bold: 700,
+  Black: 900
+);
+
+$font-weights-nunito-sans: (
+  Regular: 400,
+  SemiBold: 500,
+  Bold: 700,
+  Black: 900
+);
+
+// Montserrat
+@each $weight-name, $weight-value in $font-weights-montserrat {
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../scss/vendor/fonts/Montserrat/Montserrat-' + $weight-name + '.ttf') format('truetype');
+    font-weight: $weight-value;
+    font-style: normal;
+  }
+}
+
+// Nunito Sans
+@each $weight-name, $weight-value in $font-weights-nunito-sans {
+  @font-face {
+    font-family: 'Nunito Sans';
+    src: url('../scss/vendor/fonts/Nunito_Sans/NunitoSans-' + $weight-name + '.ttf') format('truetype');
+    font-weight: $weight-value;
+    font-style: normal;
+  }
+}
