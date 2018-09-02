@@ -1,0 +1,67 @@
+.work {
+  &__list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: 400px;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::before {
+        opacity: 0.8;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::before,
+    &::after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity ease-in-out .2s;
+    }
+
+    &::before {
+      background: $color-black;
+    }
+
+    &::after {
+      content: url('../img/work/look.png');
+    }
+  }
+
+  &__load {
+    padding: 50px 0;
+    background: #f5f5f5;
+    color: $color-gray-2;
+    font-family: $font-secondary;
+    font-size: $font-s;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
