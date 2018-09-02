@@ -10,6 +10,34 @@
     position: relative;
     z-index: 1;
 
+    &.preview {
+      background: $color-white;
+      position: fixed;
+      z-index: 100;
+      top: 50%;
+      left: 50%;
+      max-height: 90vh;
+      max-width: 90vw;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 0 100vw $color-black;
+
+      &:hover {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      overflow: auto;
+
+      img {
+        width: unset;
+        height: unset;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+
     img {
       width: 100%;
       height: 100%;

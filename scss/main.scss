@@ -27,3 +27,7 @@
 body {
   font-family: $font-primary, $font-secondary, sans-serif;
 }
+
+.body--fixed {
+  position: fixed;
+}
