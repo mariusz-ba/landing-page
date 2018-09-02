@@ -183,12 +183,24 @@
       <!-- Testimonials -->
       <section class="testimonials">
         <div class="container">
-          <h2 class="testimonials__quote"> Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am loking forward to start the next one asap.</h2>
-          <h4 class="testimonials__author">Michael Hopkins</h4>
+          <ul class="testimonials__list">
+            <li data-js="testimonials-item" class="testimonials__list-item">
+              <h2 class="testimonials__quote"> Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am loking forward to start the next one asap.</h2>
+              <h4 class="testimonials__author">Michael Hopkins</h4>
+            </li>
+            <li data-js="testimonials-item" class="testimonials__list-item hide">
+              <h2 class="testimonials__quote"> Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am loking forward to start the next one asap.</h2>
+              <h4 class="testimonials__author">Michael Hopkins</h4>
+            </li>
+            <li data-js="testimonials-item" class="testimonials__list-item hide">
+              <h2 class="testimonials__quote"> Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am loking forward to start the next one asap.</h2>
+              <h4 class="testimonials__author">Michael Hopkins</h4>
+            </li>
+          </ul>
           <div class="testimonials__indicators">
-            <span></span>
-            <span class="active"></span>
-            <span></span>
+            <span data-js="testimonials-indicator" class="active"></span>
+            <span data-js="testimonials-indicator"></span>
+            <span data-js="testimonials-indicator"></span>
           </div>
         </div>
       </section>
@@ -254,6 +266,7 @@
         </div>
       </footer>
     </main>
+    <script src="testimonials.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
