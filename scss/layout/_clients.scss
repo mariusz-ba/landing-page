@@ -1,0 +1,24 @@
+.clients {
+  padding: 75px 0;
+
+  &__list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+    grid-gap: 2rem;
+
+    @include media-query('mobile') {
+      grid-template-columns: 1fr;
+      grid-gap: 64px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    img {
+      height: 64px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.footer {
+  padding: 75px 0;
+  background: #141414;
+  font-family: $font-primary;
+
+  & > div {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-gap: 2rem;
+
+    @include media-query('mobile') {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__about {
+    &-name {
+      font-family: $font-secondary;
+      font-weight: 500;
+      font-size: $font-m;
+      color: $color-white;
+      margin-bottom: 1.5rem;
+    }
+
+    &-description {
+      color: $color-gray-2;
+      font-size: $font-s;
+      line-height: 1.5;
+    }
+  }
+
+  &__contact {
+    font-size: $font-s;
+    color: $color-gray-2;
+
+    &-text {
+      line-height: 1.5;
+    }
+  }
+
+  &__links {
+    display: flex;
+    font-size: $font-s;
+
+    &-list {
+      flex: 1;
+      list-style-type: none;
+
+      &:nth-of-type(2) {
+        flex: 2;
+      }
+    }
+
+    &-item {
+      a {
+        text-decoration: none;
+        color: $color-gray-2;
+        
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
