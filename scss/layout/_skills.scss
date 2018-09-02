@@ -1,0 +1,30 @@
+.skills {
+  background: $color-gray-0;
+  padding: 150px 0;
+
+  & > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__title {
+    font-family: $font-secondary;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+
+    &-name {
+      font-family: $font-secondary;
+      font-size: $font-s;
+      margin-bottom: 1rem;
+    }
+  }
+}

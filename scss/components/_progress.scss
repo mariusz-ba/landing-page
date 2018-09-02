@@ -1,0 +1,22 @@
+.progress {
+  position: relative;
+  height: 3px;
+
+  &__background,
+  &__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+  }
+  
+  &__background {
+    background: $color-gray-1;
+    width: 100%;
+  }
+  
+  &__indicator {
+    background: $color-teal;
+    width: var(--width);
+  }
+}

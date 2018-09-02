@@ -1,0 +1,48 @@
+.numbers {
+  padding: 75px 0;
+  background: $color-teal;
+  color: $color-white;
+
+  & > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+  }
+
+  &-group {
+    display: grid;
+    grid-template-areas: "icon number"
+                         "icon title";
+    grid-template-columns: 32px 1fr;
+    grid-template-rows: 16px 16px;
+    grid-column-gap: 1rem;
+    grid-row-gap: .5rem;
+
+    &__icon {
+      grid-area: icon;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+      }
+    }
+
+    &__number {
+      grid-area: number;
+      font-family: $font-secondary;
+      font-size: $font-m;
+      font-weight: 500;
+    }
+
+    &__title {
+      grid-area: title;
+      font-family: $font-secondary;
+      font-size: $font-s;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+}

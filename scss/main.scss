@@ -9,10 +9,13 @@
 // Components
 @import 'components/_container';
 @import 'components/_navbar';
+@import 'components/_progress';
 
 // Layout
 @import 'layout/_header';
 @import 'layout/_about';
+@import 'layout/_skills';
+@import 'layout/_numbers';
 
 body {
   font-family: $font-primary, $font-secondary, sans-serif;
