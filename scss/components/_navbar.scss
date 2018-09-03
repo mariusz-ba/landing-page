@@ -69,21 +69,21 @@
     @include media-query('mobile') {
       padding-left: 8.6666%;
       padding-right: 8.6666%;
-      padding-top: .5rem;
-      padding-bottom: .5rem;
 
       background: $color-gray-1;
-
-      display: none;
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      border-top: 1px solid rgba(0, 0, 0, .125);
-      border-bottom: 1px solid rgba(0, 0, 0, .125);
-
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height ease-in-out .3s,
+                  box-shadow ease-in-out .3s;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, .0);
+      
       &--open {
-        display: block;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, .125);
+        max-height: 500px;
       }
     }
   }
@@ -124,7 +124,11 @@
       @include media-query('mobile') {
         margin-right: 0 !important;
 
+        &:first-of-type { margin-top: .5rem; }
+        &:last-of-type { margin-bottom: .5rem; }
+
         a {
+          display: block;
           padding: 1rem 0;
         }
       }

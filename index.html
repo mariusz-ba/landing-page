@@ -9,7 +9,7 @@
   <body>
     <main>
       <!-- Header -->
-      <header class="header">
+      <header class="header" id="home">
         <div class="navbar">
           <div class="container">
             <button class="navbar__toggler" data-js="menu-toggler">
@@ -22,13 +22,13 @@
             </a>
             <nav class="navbar__nav" data-js="navbar-nav">
               <ul class="navbar__menu">
-                <li class="navbar__menu-item"><a href="#">Home</a></li>
-                <li class="navbar__menu-item"><a href="#">About</a></li>
-                <li class="navbar__menu-item"><a href="#">Work</a></li>
-                <li class="navbar__menu-item"><a href="#">Process</a></li>
-                <li class="navbar__menu-item"><a href="#">Services</a></li>
-                <li class="navbar__menu-item"><a href="#">Testimonials</a></li>
-                <li class="navbar__menu-item"><a href="#">Contact</a></li>
+                <li class="navbar__menu-item"><a href="#home" data-js="menu-item">Home</a></li>
+                <li class="navbar__menu-item"><a href="#about" data-js="menu-item">About</a></li>
+                <li class="navbar__menu-item"><a href="#work" data-js="menu-item">Work</a></li>
+                <li class="navbar__menu-item"><a href="#process" data-js="menu-item">Process</a></li>
+                <li class="navbar__menu-item"><a href="#services" data-js="menu-item">Services</a></li>
+                <li class="navbar__menu-item"><a href="#testimonials" data-js="menu-item">Testimonials</a></li>
+                <li class="navbar__menu-item"><a href="#contact" data-js="menu-item">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -37,12 +37,12 @@
           <div>
             <h1 class="header__title">We Design and Develop</h1>
             <p class="header__description">We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps.</p>
-            <a class="header__button" href="#">Contact us</a>
+            <a class="header__button" href="#contact" data-js="menu-item">Contact us</a>
           </div>
         </div>
       </header>
       <!-- About -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <h2 class="about__title">About Us</h2>
           <p class="about__description">Divide have don't mean wherein air fourth. Own itself make have night won't make. A you under Seed appear which good give. Own give air without fowl moveth dry first heaven fruit, dominion she'd won't very all.</p>
@@ -114,7 +114,7 @@
         </div>
       </section>
       <!-- Work -->
-      <section class="work">
+      <section class="work" id="work">
         <ul class="work__list">
           <li class="work__item" data-js="work-item"><img src="img/work/camera.jpg" alt="work"/></li>
           <li class="work__item" data-js="work-item"><img src="img/work/phone.jpg" alt="work"/></li>
@@ -128,7 +128,7 @@
         <div class="work__load">Load more work</div>
       </section>
       <!-- Work Process -->
-      <section class="process">
+      <section class="process" id="process">
         <div class="container">
           <h2 class="process__title">Our Work Process</h2>
           <p class="process__description">Was years it seasons was there form he in them together over that, thord sixth gathered female creeping bearing behold years.</p>
@@ -136,7 +136,7 @@
         </div>
       </section>
       <!-- Services -->
-      <section class="services">
+      <section class="services" id="services">
         <div class="container">
           <div class="service">
             <img class="service__icon" src="img/services/diamond.png" alt="diamong"/>
@@ -181,7 +181,7 @@
         </div>
       </section>
       <!-- Testimonials -->
-      <section class="testimonials">
+      <section class="testimonials" id="testimonials">
         <div class="container">
           <ul class="testimonials__list">
             <li data-js="testimonials-item" class="testimonials__list-item">
@@ -217,7 +217,7 @@
         </div>
       </section>
       <!-- Contact -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <h2 class="contact__title">Need a Project?</h2>
           <p class="contact__description">Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful.</p>

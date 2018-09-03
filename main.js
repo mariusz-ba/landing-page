@@ -3,6 +3,30 @@
   const navbarNav = document.querySelector('[data-js=navbar-nav]');
   const workItems = document.querySelectorAll('[data-js=work-item]');
 
+  // Scrolling to anchor
+  const links = document.querySelectorAll('[data-js=menu-item]');
+  links.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      
+      const node = document.getElementById(event.target.hash.slice(1));
+
+      window.scroll({
+        top: node.offsetTop,
+        left: 0,
+        behavior: 'smooth'
+      })
+
+      // Hide menu on mobile
+      navbarNav &&
+        navbarNav.classList.remove('navbar__nav--open');
+
+      menuToggler &&
+        menuToggler.classList.remove('navbar__toggler--open');
+    })
+  })
+
+  // Preview image
   let top = 0;
 
   workItems &&
@@ -34,5 +58,6 @@
 
   if(!menuToggler) throw 'Could not find data-js=menu-toggler';
   if(!navbarNav) throw 'Could not find data-js=navbar-nav';
-  if(!workItems) throw 'Could not find data-js=work-items';
+  if(!workItems) throw 'Could not find data-js=work-item';
+  if(!links) throw 'Could not find data-js=menu-item';
 })()
